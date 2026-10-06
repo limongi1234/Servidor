@@ -4,8 +4,8 @@ Lado **servidor** de uma aplicação **cliente-servidor** de **locadora de filme
 
 ## ✨ Características
 
-- Comunicação via **socket TCP** (`SOCK_STREAM`), escutando na **porta 1200** (`#define PORT 1200`)
-- Código **multiplataforma**: usa `winsock.h` no Windows e sockets POSIX no Linux/Unix
+- Comunicação via **socket TCP** (`SOCK_STREAM`), escutando na **porta 2000**
+- Feito para **Windows** (Winsock), como projeto do **Dev-C++**
 - Catálogo de filmes em memória (`struct Filmes` com nome, **status** e **nº de locações**)
 - Acervo inicial: **Matrix**, **Hércules** e **Pânico** (todos "Disponível")
 - Recebe operação + código do cliente e responde com os dados do filme
@@ -28,17 +28,15 @@ struct Filmes {
 
 ## 🚀 Como executar
 
-```bash
-# Linux
-gcc servidor.c -o servidor
-./servidor
+Abra o projeto `servidor.dev` no **Dev-C++** e compile, ou use o MinGW no Windows:
 
-# Windows (MinGW)
+```bash
 gcc servidor.c -o servidor -lwsock32
+servidor.exe
 ```
 
 ## 🔗 Cliente
 
 Use junto com o repositório [`Cliente`](https://github.com/limongi1234/Cliente), que faz as requisições a este servidor.
 
-> ⚠️ **Atenção:** no código original, o servidor escuta na porta **1200** e o cliente conecta na porta **2000** — para que se comuniquem, ajuste uma das duas para que coincidam.
+Inicie o servidor primeiro; os dois usam a porta **2000**.
