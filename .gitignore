@@ -1,0 +1,30 @@
+# Binários e objetos compilados
+*.exe
+*.o
+*.obj
+*.out
+
+# Arquivos do Visual Studio / Visual C++
+*.bak
+*.idb
+*.pdb
+*.ilk
+*.suo
+*.user
+*.opt
+*.plg
+*.ncb
+*.intermediate.manifest
+mt.dep
+BuildLog.htm
+Debug/
+Release/
+.vs/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Claude Code
+.claude/
+CLAUDE.md
